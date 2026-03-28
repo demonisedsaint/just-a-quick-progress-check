@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>System Access</title>
+  <style>
+    body {
+      background: black;
+      color: #00ff00;
+      font-family: monospace;
+      padding: 20px;
+    }
+    #text {
+      white-space: pre-line;
+      font-size: 18px;
+    }
+    .blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="text"></div>
+
+<script>
+const lines = [
+  "Initializing system...",
+  "Connecting to secure server...",
+  "Bypassing firewall...",
+  "Accessing user data...",
+  "Downloading files...",
+  "Extracting information...",
+  "",
+  "✅ ACCESS GRANTED",
+  "",
+  "Thanks, I have your IP now <3",
+  "- aluminati"
+];
+
+let i = 0;
+const speed = 1000;
+
+function typeLine() {
+  if (i < lines.length) {
+    document.getElementById("text").innerHTML += lines[i] + "\n";
+    i++;
+    setTimeout(typeLine, speed);
+  } else {
+    document.getElementById("text").innerHTML += "\n\n you are so cooked matee!!";
+  }
+}
+
+typeLine();
+</script>
+
+</body>
+</html>
